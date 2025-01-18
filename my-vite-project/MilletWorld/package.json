@@ -1,0 +1,26 @@
+{
+  "name": "milletworld",
+  "version": "1.0.0",
+  "description": "A website dedicated to showcasing raw millets, products, and the millet production process.",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "vite": "^2.0.0"
+  },
+  "keywords": [
+    "millets",
+    "agriculture",
+    "food",
+    "website"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
