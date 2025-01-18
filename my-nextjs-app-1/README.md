@@ -1,58 +1,28 @@
-# My Next.js App
+# notebook-renderer-react-sample
 
-This is a simple Next.js application that demonstrates the basic structure and functionality of a Next.js project.
+⚠️ Work-in-progress starter code for custom notebook renderers in VS Code. Expect this to change as notebooks matures. ⚠️
 
-## Project Structure
+This starter includes:
 
-```
-my-nextjs-app
-├── pages
-│   ├── index.tsx         # Main entry point of the application
-│   └── _app.tsx          # Custom App component for global styles
-├── public
-│   └── favicon.ico       # Favicon for the application
-├── styles
-│   ├── Home.module.css   # CSS modules for the Home component
-│   └── globals.css       # Global CSS styles
-├── components
-│   └── Navbar.tsx        # Navigation bar component
-├── package.json          # npm configuration file
-├── tsconfig.json         # TypeScript configuration file
-└── README.md             # Documentation for the project
-```
+ - 🖥️ TypeScript code to create a simple `NotebookOutputRenderer`
+ - 📦 A Webpack build for renderer client code
+ - ⚡ Support for hot module reloading and safe boilerplate
+ - 🎨 CSS modules support
 
-## Getting Started
+### Running this Sample
 
-To get started with this project, follow these steps:
+ 1. `cd notebook-renderer-react-sample`
+ 1. `code-insiders .`: Open the folder in VS Code Insiders
+ 1. Hit `F5` to build+debug
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
+### Structure
 
-2. Navigate to the project directory:
-   ```
-   cd my-nextjs-app
-   ```
+A Notebook Renderer consists of code that runs in the VS Code Extension Host (Node.js), which registers the renderer and passes data into the UI code running inside a WebView (Browser/DOM).
 
-3. Install the dependencies:
-   ```
-   npm install
-   ```
+This uses TypeScript project references. There are three projects in the `src` directory:
 
-4. Run the development server:
-   ```
-   npm run dev
-   ```
+ - `extension` contains the code running in Node.js extension host. It's compiled with `tsc`.
+ - `client` is the UI code, built by Webpack, with access to the DOM.
+ - `common` contains code shared between the extension and client.
 
-5. Open your browser and go to `http://localhost:3000` to see the application in action.
-
-## Features
-
-- A responsive navigation bar
-- Scoped CSS modules for component-specific styles
-- Global styles for consistent design across the application
-
-## Contributing
-
-Feel free to submit issues or pull requests to improve the project!
+When you run `watch`, `compile`, or `dev`, we invoke both `tsc` and `webpack` to compile the extension and the client portion of the code.
