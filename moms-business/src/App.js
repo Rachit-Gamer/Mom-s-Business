@@ -6,6 +6,7 @@ import Millets from './components/Millets';
 import Products from './components/Products';
 import Process from './components/Process';
 import Contact from './components/Contact';
+import './App.css'; // Import App.css
 
 function App() {
   return (
