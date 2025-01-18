@@ -1,3 +1,4 @@
+// filepath: /src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home';
@@ -5,7 +6,6 @@ import Millets from './Millets';
 import Products from './Products';
 import Process from './Process';
 import Contact from './Contact';
-import './App.css';
 
 function App() {
   return (
