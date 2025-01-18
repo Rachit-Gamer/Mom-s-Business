@@ -13,23 +13,21 @@
 }
 
 .description {
-  text-align: center;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  justify-content: center;
   margin-top: 3rem;
 }
 
 .card {
   margin: 1rem;
   padding: 1.5rem;
-  text-align: left;
+  text-align: center;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;

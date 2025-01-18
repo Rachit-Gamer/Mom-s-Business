@@ -6,10 +6,8 @@ const Home: React.FC = () => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <h1 className={styles.title}>Welcome to My Next.js App</h1>
-      <p className={styles.description}>
-        This is the homepage of your Next.js application.
-      </p>
+      <h1>Welcome to My Next.js App</h1>
+      <p>This is the homepage content.</p>
     </div>
   );
 };
