@@ -1,4 +1,4 @@
-// filepath: /src/Home.js
+// filepath: /src/components/Home.js
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
